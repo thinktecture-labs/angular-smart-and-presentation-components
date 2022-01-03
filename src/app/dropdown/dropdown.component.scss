@@ -2,39 +2,6 @@
   display: flex;
 }
 
-.preview {
-  height: 200px;
-  width: 300px;
-  object-fit: cover;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: .5rem;
-  padding: .3rem .5rem;
+button {
   cursor: pointer;
-  transition: .3s ease;
-
-  &:hover {
-    background-color: #f8b8db;
-  }
-
-  div {
-    margin: auto 0;
-  }
-
-  .preview {
-    height: 3rem;
-    width: 5rem;
-    object-fit: cover;
-    border-radius: .3rem;
-    overflow: hidden;
-  }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CdOption} from "./dropdown/dropdown.component";
+import {CdOption} from "./cd-select/cd-select.component";
 
 @Component({
   selector: 'app-root',

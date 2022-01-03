@@ -1,13 +1,8 @@
 <button (click)="open=!open">
-  <img [src]="selectedOption?.cover" alt="" class="preview">
+  <ng-content select="[trigger]"></ng-content>
 </button>
-<ul *ngIf="open">
-  <li *ngFor="let option of options" (click)="select(option)" [class.selected]="selected === option.id">
-    <img [src]="option.cover" alt="" class="preview">
-    <div>
-      {{option.artist}} - {{option.song}}
-    </div>
-  </li>
-</ul>
+<div *ngIf="open">
+  <ng-content select="[content]"></ng-content>
+</div>
 
 

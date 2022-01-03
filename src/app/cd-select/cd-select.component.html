@@ -1,0 +1,18 @@
+<ng-template #nonSelected>
+  Please select a CD
+</ng-template>
+
+<app-dropdown #dropdown>
+  <img *ngIf="selectedOption; else nonSelected" [src]="selectedOption?.cover" alt="" class="preview" trigger>
+
+  <ul content>
+    <li *ngFor="let option of options" (click)="select(option); dropdown.open = false;" [class.selected]="selectedOption?.id === option.id">
+      <img [src]="option.cover" alt="" class="preview">
+      <div>
+        {{option.artist}} - {{option.song}}
+      </div>
+    </li>
+  </ul>
+</app-dropdown>
+
+
