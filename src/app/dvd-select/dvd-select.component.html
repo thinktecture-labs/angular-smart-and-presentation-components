@@ -1,0 +1,28 @@
+<ng-template #noSelection>
+  Please select a DVD
+</ng-template>
+
+<app-dropdown #dropdown>
+  <div trigger class="trigger">
+    <ng-container *ngIf="selectedOption; else noSelection">
+      <ul>
+        <li>{{selectedOption?.title}}</li>
+        <li>{{selectedOption?.oskars}} Oskars</li>
+        <li> Director: {{selectedOption?.director}}</li>
+      </ul>
+      <img [src]="selectedOption?.poster" alt="" class="preview" trigger>
+    </ng-container>
+  </div>
+
+  <ul content>
+    <li *ngFor="let option of options" (click)="select(option); dropdown.open = false;"
+        [class.selected]="selectedOption?.id === option.id">
+      <img [src]="option.poster" alt="" class="preview">
+      <div>
+        {{option.title}} - {{option.year}}
+      </div>
+    </li>
+  </ul>
+</app-dropdown>
+
+
