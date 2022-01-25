@@ -1,0 +1,13 @@
+.current {
+  background-color: lightgreen;
+}
+
+.option {
+  padding: .5rem .75rem;
+  border-radius: .25rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightcyan;
+  }
+}

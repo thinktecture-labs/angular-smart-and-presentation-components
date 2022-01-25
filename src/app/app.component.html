@@ -1,7 +1,20 @@
-<h1>Angular smart and presentational component demo</h1>
+<h1>Angular smart and presentational components demo</h1>
 <h2>CD Dropdown</h2>
 <cd-select [options]="cdOptions"></cd-select>
 
 
 <h2>DVD Dropdown</h2>
 <dvd-select [options]="dvdOptions"></dvd-select>
+
+<h2>Generic Select</h2>
+<app-generic-select [options]="cdOptions">
+  <ng-template let-option #trigger>
+    {{option?.artist ?? 'Select an option'}}
+  </ng-template>
+  <ng-template let-option let-selected="selected" #option>
+    <div [class.current]="option?.id === selected?.id" class="option">{{option?.artist}}</div>
+  </ng-template>
+</app-generic-select>
+
+
+

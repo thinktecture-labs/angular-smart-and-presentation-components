@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CdSelectComponent } from "./cd-select/cd-select.component";
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { DvdSelectComponent } from './dvd-select/dvd-select.component';
+import { GenericSelecetComponent } from './generic-select/generic-select.component';
+
 
 
 @NgModule({
@@ -14,6 +16,7 @@ import { DvdSelectComponent } from './dvd-select/dvd-select.component';
     CdSelectComponent,
     DropdownComponent,
     DvdSelectComponent,
+    GenericSelecetComponent,
   ],
   imports: [
     BrowserModule,

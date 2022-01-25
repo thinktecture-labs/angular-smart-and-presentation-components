@@ -1,0 +1,11 @@
+<app-dropdown #dropdown>
+    <div trigger>
+      <ng-container *ngTemplateOutlet="triggerRef; context: {$implicit: selectedOption}"></ng-container>
+    </div>
+
+  <ul content>
+    <div *ngFor="let option of options" (click)="select(option); dropdown.open = false;">
+      <ng-container *ngTemplateOutlet="optionRef; context: {$implicit: option, selected: selectedOption}"></ng-container>
+    </div>
+  </ul>
+</app-dropdown>

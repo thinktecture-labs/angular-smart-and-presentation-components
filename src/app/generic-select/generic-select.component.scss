@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  position: relative;
+}
+
+.trigger {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  ul {
+    li {
+      list-style: none;
+      user-select: none;
+    }
+  }
+}
+
+.preview {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: #b8c2f8;
+  }
+
+  div {
+    margin: auto 0;
+  }
+
+  .preview {
+    height: 5rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    overflow: hidden;
+  }
+}
