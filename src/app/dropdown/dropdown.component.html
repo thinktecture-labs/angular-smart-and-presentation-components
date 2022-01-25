@@ -1,7 +1,7 @@
-<button (click)="open=!open">
+<button (click)="open = !open">
   <ng-content select="[trigger]"></ng-content>
 </button>
-<div *ngIf="open">
+<div *ngIf="open" class="panel">
   <ng-content select="[content]"></ng-content>
 </div>
 
